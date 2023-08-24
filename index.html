@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Troubleshoot ESP Launchpad</title>
+    <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
+    <link href="./css/styles.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container mt-2">
+        <header>
+            <h1>Troubleshooting Guide</h1>
+        </header>
+        <hr />
+        <div>
+            <div class="col-xs-12">
+                <!-- Quick Try -->
+                <div class="col-xs-12 mt-4">
+                    <h4 class="topic mb-4"><b>Device Connection Issue</b></h4>
+                    <p>
+                        If your device is not shown in list that pop-up while connection
+                        establishing step then your device might be not connected properly to port
+                        or their might be the
+                        <strong>browser compatability issue</strong>. Please
+                        ensure that it is properly connected to the port. Reseating
+                        connection cable might also helps to resolve this issue.
+                    </p>
+                </div>
+                <!-- DIY -->
+                <div class="col-xs-12 mt-4">
+                    <h4 class="topic mb-4"><b>Browser Compatability Issue</b></h4>
+                    <p>
+                        <span style="color: #e63f36">
+                            This tool is not supported on Safari & Firefox browsers yet!
+                        </span>
+                        Please try using another browser like
+                        <strong>Google Chrome</strong> with supported version.
+                    </p>
+                    <p>
+                        ESP Launchpad makes use of <strong>Web Serial API</strong> to
+                        communicate with the device. Currently Safari & Firefox browsers
+                        don't support it yet. We will add support for this browser as soon
+                        as Safari & Firefox starts supporting Web Serial API. Please find
+                        more about <strong>Web Serial API</strong> browser compatability
+                        guide
+                        <a href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API#browser_compatibility"
+                            target="_blank">here</a>
+                    </p>
+                </div>
+                <div class="col-xs-12 mt-4">
+                    <h4 class="topic mb-4"><b>Device Compatability Issue</b></h4>
+                    <p>
+                        If you are using older devices or older versions of device then sometimes you may face an issue in connection establishing step or firmware flashing step. Please try that steps by pressing boot button provided on device.
+                        <details>
+                            <summary>List of devices that supported by ESP Launchpad</summary>
+                            <ol>
+                                <li>ESP32</li>
+                                <li>ESP32-C3</li>
+                                <li>ESP32-C6</li>
+                                <li>ESP32-H2</li>
+                                <li>ESP32-S2</li>
+                                <li>ESP32-S3</li>
+                                <li>ESP8266</li>
+                            </ol>
+                        </details>
+                    </p>
+                </div>
+                <div class="col-xs-12 mt-4" id="browserSupport">
+                    <h4 class="topic mb-4"><b>Driver Compatability Issue</b></h4>
+                    <p>
+                        It has been seen that on <strong>windows system</strong> with latest <strong>Silicon Lab CP210x USB to UART Bridge</strong>
+                        there are device connection or flashing issues.We are looking into it to resolve the issue.
+                        You can still try by downgrading silicon lab CP210x USB to UART Bridge driver version to <code>6.7.x</code> that can resolve issue on temporarily basis.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <footer style="text-align: center;">
+            <p>If you still unable to troubleshoot the problem or face any other issues please report them on <a href="https://github.com/espressif/esp-launchpad/issues" target="_blank">ESP launchpad Issues</a></p>
+            <p>We will be happy to help you resolve your issues !</p>
+        </footer>
+    </div>
+</body>
+
+</html>
